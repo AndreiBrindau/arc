@@ -1,0 +1,7 @@
+CC = gcc
+CFLAGS = -m32 -ffreestanding -nostdlib -nostartfiles -nodefaultlibs
+
+all: kernel.bin
+
+kernel.bin: kernel.c
+	$(CC) $(CFLAGS) -o kernel.bin kernel.c
